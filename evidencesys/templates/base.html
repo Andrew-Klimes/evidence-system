@@ -33,8 +33,8 @@
 
         <!-- 3. TLAČÍTKA -->
         <div class="nav-buttons">
-          <a href="#login" class="btn btn-secondary">Přihlásit se</a>
-          <a href="#register" class="btn btn-primary">Registrovat</a>
+          <a href="{% url 'login' %}" class="btn btn-secondary">Přihlásit se</a>
+          <a href="{% url "signup" %}" class="btn btn-primary">Registrovat</a>
           <button id="theme-toggle" aria-label="Přepnout tmavý/světlý režim">
             🌙 Tmavý režim
           </button>

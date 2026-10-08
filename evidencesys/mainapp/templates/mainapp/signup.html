@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Registrace nového účtu{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'mainapp/signup.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+
+{% endblock css_files %}
+
+
+{% block content %}
+
+    <main>
+
+        <div class="register-container">
+            <div class="register-card">
+                <div class="register-header">
+                    <h1>Vytvořit účet</h1>
+                    <p>Zadejte svoje údaje pro registraci do systému</p>
+                </div>
+
+                <form action="/register" method="POST" id="registrationForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Jméno</label>
+                            <input 
+                                type="text" 
+                                id="firstName" 
+                                name="firstName" 
+                                placeholder="Jan" 
+                                required 
+                                autocomplete="given-name"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Příjmení</label>
+                            <input 
+                                type="text" 
+                                id="lastName" 
+                                name="lastName" 
+                                placeholder="Novák" 
+                                required 
+                                autocomplete="family-name"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mailová adresa</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="jan.novak@domain.cz" 
+                            required 
+                            autocomplete="email"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Heslo</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Apoň 8 znaků" 
+                            required 
+                            autocomplete="new-password"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Potvrzení hesla</label>
+                        <input 
+                            type="password" 
+                            id="confirmPassword" 
+                            name="confirmPassword" 
+                            placeholder="Zadejte heslo znovu" 
+                            required 
+                            autocomplete="new-password"
+                        >
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">
+                            Souhlasím s <a href="#">obchodními podmínkami</a> a <a href="#">zásadami ochrany osobních údajů</a>.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Zaregistrovat se</button>
+                </form>
+
+                <div class="register-footer">
+                    Již máte účet? <a href="#">Přihlaste se</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+{% endblock content %}

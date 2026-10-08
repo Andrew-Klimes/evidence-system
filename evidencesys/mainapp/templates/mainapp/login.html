@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Přihlášení do systému{% endblock title %}
+
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'mainapp/login.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+{% endblock css_files %}
+
+
+{% block content %}
+
+    <main>
+
+        <div class="login-card">
+            <div class="login-header">
+                <h1>Přihlášení</h1>
+                <p>Vložte své údaje pro přístup k účtu</p>
+            </div>
+
+            <form action="/login" method="POST">
+                <div class="form-group">
+                    <label for="email">E-mailová adresa</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="jmeno@domain.cz" 
+                        required 
+                        autocomplete="email"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Heslo</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="••••••••" 
+                        required 
+                        autocomplete="current-password"
+                    >
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember">
+                        <span>Zapamatovat si mě</span>
+                    </label>
+                    <a href="#" class="forgot-password">Zapomenuté heslo?</a>
+                </div>
+
+                <button type="submit" class="btn-submit">Přihlásit se</button>
+            </form>
+
+            <div class="login-footer">
+                Nemáte ještě účet? <a href="#">Zaregistrujte se</a>
+            </div>
+        </div>
+
+    </main>
+
+{% endblock content %}
+
+
