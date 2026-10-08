@@ -1,14 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}{% endblock title %}</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=technor@900&display=swap"
+      rel="stylesheet" />
+
     {% block css_files %}{% endblock css_files %}
-</head>
-<body>
-    {% block content %}{% endblock content %}
-</body>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-container">
+        <!-- 1. LOGO -->
+        <a href="#" class="logo">
+          <img src="{% static 'images/logo.png' %}" alt="Logo" />
+          EV|CLIENTs
+        </a>
+
+        <!-- 2. NAVIGAČNÍ MENU -->
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="{% url 'home_page' %}" class="active">Domů</a></li>
+            <li><a href="#sluzby">Služby</a></li>
+            <li><a href="#o-nas">O nás</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </nav>
+
+        <!-- 3. TLAČÍTKA -->
+        <div class="nav-buttons">
+          <a href="#login" class="btn btn-secondary">Přihlásit se</a>
+          <a href="#register" class="btn btn-primary">Registrovat</a>
+          <button id="theme-toggle" aria-label="Přepnout tmavý/světlý režim">
+            🌙 Tmavý režim
+          </button>
+        </div>
+      </div>
+    </header>
+
+    {% block content %} {% endblock content %}
+  </body>
 </html>
+<script src="{% static 'js/base.js' %}"></script>
