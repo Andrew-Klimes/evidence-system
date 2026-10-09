@@ -4,10 +4,294 @@
 {% block title %}Evidenční systém{% endblock title %}
 
 {% block css_files %}
-    <link rel="stylesheet" href="{% static 'registration/index.css' %}">
+    <link rel="stylesheet" href="{% static 'mainapp/index.css' %}">
 {% endblock css_files %}
 
 {% block content %}
-    <h1>Evidenční systém</h1>
-    <p>Vítejte v evidenčním systému!</p>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fa-solid fa-sparkles"></i>
+                Nová verze platformy 2.0 je tu
+            </div>
+            </div>
+            <h1 class="hero-title">
+             Moderní evidenční systém <span>bez starostí</span> a efektivně
+            </h1>
+            <p class="hero-subtitle">
+            Zjednodušte své každodenní pracovní procesy s inteligentním evidenčním
+            systémem. Všechny informace na jednom místě, dostupné odkudkoliv.
+            </p>
+            <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">
+                Vyzkoušet zdarma
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#funkce" class="btn btn-outline"> Zjistit více </a>
+            </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+            <div class="hero-card-preview">
+            <img
+                src="https://placehold.co/600x400/1e293b/ffffff?text=Dashboard+System+Preview"
+                alt="Ukázka systému"
+                class="hero-card-img" />
+            </div>
+
+            <div class="floating-badge top-right">
+            <div class="floating-icon" style="background: #10b981">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div>
+                <div style="font-weight: 700; font-size: 14px">99.9% Uptime</div>
+                <div style="font-size: 12px; color: var(--text-muted)">
+                Spolehlivý provoz
+                </div>
+            </div>
+            </div>
+                <div class="floating-badge bottom-left">
+                    <div class="floating-icon" style="background: var(--primary)">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                <div>
+                    <div style="font-weight: 700; font-size: 14px">GDPR Compliant</div>
+                    <div style="font-size: 12px; color: var(--text-muted)">Šifrovaná data</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section" id="statistiky">
+      <div class="stats-container">
+        <div>
+          <div class="stat-number">10k+</div>
+          <div class="stat-label">Aktivních uživatelů</div>
+        </div>
+        <div>
+          <div class="stat-number">99.8%</div>
+          <div class="stat-label">Spokojenost zákazníků</div>
+        </div>
+        <div>
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Technická podpora</div>
+        </div>
+        <div>
+          <div class="stat-number">5M+</div>
+          <div class="stat-label">Zpracovaných záznamů</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features-section" id="funkce">
+      <div class="section-header">
+        <div class="section-subtitle">Klíčové Vlastnosti</div>
+        <h2 class="section-title">Vše, co potřebujete pro efektivní řízení</h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="feature-title">Chytrá Analytika</h3>
+          <p class="feature-desc">
+            Získejte okamžitý přehled o klíčových metrikách a trendech díky
+            přehledným grafech a automatickým reportům.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <h3 class="feature-title">Vysoká Bezpečnost</h3>
+          <p class="feature-desc">
+            Vaše data jsou chráněna nejnovějšími standardy šifrování a
+            pravidelným automatickým zálohováním.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-arrows-rotate"></i>
+          </div>
+          <h3 class="feature-title">Automatizace Procesů</h3>
+          <p class="feature-desc">
+            Ušetřete čas automatizací opakujících se úkolů
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h3 class="feature-title">Týmová Spolupráce</h3>
+          <p class="feature-desc">
+            Snadno sdílejte přístupy, nastavujte role uživatelům a pracujte na
+            projektech společně v reálném čase.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <h3 class="feature-title">Plná Responzivita</h3>
+          <p class="feature-desc">
+            Přistupujte ke svým datům odkudkoliv – systém funguje perfektně na
+            počítači, tabletu i mobilu.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-plug"></i>
+          </div>
+          <h3 class="feature-title">Snadná Integrace</h3>
+          <p class="feature-desc">
+            Propojte systém se svými stávajícími nástroji pomocí našich
+            připravených API rozhraní.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits-section" id="vyhody">
+      <div class="benefits-container">
+        <div>
+          <img
+            src="https://placehold.co/550x400/e2e8f0/0f172a?text=Workflow+Illustration"
+            alt="Workflow"
+            style="width: 100%; border-radius: var(--radius-lg)" />
+        </div>
+        <div>
+          <div class="section-subtitle">Proč zvolit náš systém</div>
+          <h2 class="section-title" style="margin-bottom: 16px">
+            Navrženo pro růst vašeho podnikání
+          </h2>
+          <p style="color: var(--text-muted)">
+            Náš systém pomáhá firmám zefektivnit provoz a eliminovat chybovost
+            spojenou s ručním zadáváním dat.
+          </p>
+
+          <ul class="benefits-list">
+            <li class="benefits-item">
+              <div class="benefits-check">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div>
+                <strong>Úspora až 40 % času</strong> při denní administrativě
+              </div>
+            </li>
+            <li class="benefits-item">
+              <div class="benefits-check">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div>
+                <strong>Rychlé nasazení</strong> bez nutnosti složitého školení
+              </div>
+            </li>
+            <li class="benefits-item">
+              <div class="benefits-check">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div>
+                <strong>Průběžné aktualizace</strong> a nové funkce bez
+                příplatků
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="kontakt">
+      <div class="cta-card">
+        <h2 class="cta-title">Jste připraveni modernizovat svoji evidenci?</h2>
+        <p class="cta-desc">
+          Začněte s 14denní zkušební verzí zdarma. Bez nutnosti zadávat platební
+          kartu.
+        </p>
+
+        <form
+          class="cta-form"
+          onsubmit="
+            event.preventDefault();
+            alert('Děkujeme za přihlášení!');
+          ">
+          <input
+            type="email"
+            placeholder="Zadejte váš e-mail"
+            class="cta-input"
+            required />
+          <button type="submit" class="cta-btn">Získat přístup</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <span>EV|CLIENTs</span>
+          </a>
+          <p class="footer-desc">
+            Komplexní softwarové řešení pro evidenci, správu dat a automatizaci
+            firemních procesů.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-link"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="#" class="social-link"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a href="#" class="social-link"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Produkt</h4>
+          <ul class="footer-links">
+            <li><a href="#funkce">Funkce</a></li>
+            <li><a href="#">Ceník</a></li>
+            <li><a href="#">Integrace</a></li>
+            <li><a href="#">Aktualizace</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Společnost</h4>
+          <ul class="footer-links">
+            <li><a href="#">O nás</a></li>
+            <li><a href="#">Kariéra</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Podpora</h4>
+          <ul class="footer-links">
+            <li><a href="#">Centrum nápovědy</a></li>
+            <li><a href="#">Dokumentace</a></li>
+            <li><a href="#">Stav systému</a></li>
+            <li><a href="#">Ochrana soukromí</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 EV|CLIENTs s.r.o. Všechna práva vyhrazena.</div>
+        <div>Vytvořeno pro moderní webové aplikace</div>
+      </div>
+    </footer>
+
 {% endblock content %}
